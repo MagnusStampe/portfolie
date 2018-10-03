@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+INTRO
+*/
+
+#intro {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: grey;
+
+  padding: 4em;
+}
+
+.scroll_arrow {
+  position: absolute;
+  bottom: 2em;
+  width: 8em;
+
+  animation: arrow_kf 1s infinite ease-in-out alternate;
+
+  fill: #444;
+}
+
+.scroll_arrow .left {
+  transform: rotate(20deg);
+}
+
+.scroll_arrow .right {
+  transform-origin: right top;
+  transform: rotate(-20deg);
+}
+
+@keyframes arrow_kf {
+  100% {
+    transform: translateY(60%);
+  }
+}
+
+/*
+SECTION NAME
+*/
