@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  color: #121212;
+  font-family: "Muli", sans-serif;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  padding: 40px;
+  position: relative;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/*
+LANDING
+*/
+
+#landing img {
+  width: 300px;
+  position: absolute;
+  left: 80px;
+  top: 150px;
+}
+
+/* .linkedIn {
+  background-image: url("linkedIn.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 11em;
+  height: 4em;
+
+  margin: 1.5em 0;
+  border: solid black 1px;
+
+  cursor: pointer;
+} */
+
+.scroll_arrow {
+  position: absolute;
+  bottom: 2em;
+  width: 8vw;
+  left: 46vw;
+
+  animation: arrow_kf 1s infinite ease-in-out alternate;
+
+  fill: #121212;
+}
+
+.scroll_arrow .left {
+  transform: rotate(20deg);
+}
+
+.scroll_arrow .right {
+  transform-origin: right top;
+  transform: rotate(-20deg);
+}
+
+@keyframes arrow_kf {
+  100% {
+    transform: translateY(60%);
+  }
+}
+
+/*
+INTRO
+*/
+
+/*
+SKILLS
+*/
+
+/*
+PORTFOLIO
+*/

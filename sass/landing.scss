@@ -1,0 +1,46 @@
+#landing {
+  img {
+    width: 300px;
+    position: absolute;
+    left: 80px;
+    top: 150px;
+  }
+
+  .linkedIn {
+    background-image: url("img/linkedIn.png");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 11em;
+    height: 4em;
+
+    margin: 1.5em 0;
+    border: solid black 1px;
+
+    cursor: pointer;
+  }
+  .scroll_arrow {
+    position: absolute;
+    bottom: 2em;
+    width: 8vw;
+    left: 46vw;
+
+    animation: arrow_kf 1s infinite ease-in-out alternate;
+
+    fill: #121212;
+
+    .left {
+      transform: rotate(20deg);
+    }
+    .right {
+      transform-origin: right top;
+      transform: rotate(-20deg);
+    }
+  }
+
+  @keyframes arrow_kf {
+    100% {
+      transform: translateY(60%);
+    }
+  }
+}
