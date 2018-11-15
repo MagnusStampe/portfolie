@@ -1,0 +1,289 @@
+#examples {
+  padding: 0;
+
+  h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  background: radial-gradient(
+      circle at bottom left,
+      $bottom_left_gradient,
+      transparent
+    ),
+    radial-gradient(circle at top right, $top_right_gradient 800%, transparent);
+  padding: 30px 40px;
+  margin: 50px 0;
+
+  $article_height: 11vw;
+
+  .example_container {
+    background-color: rgba(0, 0, 70, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, $article_height);
+    grid-gap: 20px;
+  }
+
+  article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer;
+    $article_transition: 0.2s;
+    transition: $article_transition;
+
+    //Selected article
+    &.show {
+      height: $article_height + 20vw;
+      z-index: 100;
+
+      .article_overlay {
+        opacity: 0.8;
+        cursor: initial;
+      }
+
+      .article_content {
+        opacity: 1;
+        z-index: 200;
+        display: block;
+      }
+
+      .article_info {
+        transform: translateY(0);
+      }
+      .article_bottom {
+        svg {
+          rect:first-child {
+            transform: rotate(-35deg) translate(-50px, -5px);
+          }
+
+          rect:last-child {
+            transform: rotate(35deg) translate(50px, -5px);
+            transform-origin: 100% 0%;
+          }
+        }
+      }
+    }
+
+    //Article hovered
+    &:hover .article_info {
+      transform: translateY(0);
+    }
+
+    //article setup
+    .article_content {
+      opacity: 0;
+      display: none;
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+
+      transition: $article_transition;
+
+      h2 {
+        font-size: 2rem;
+        margin-top: 40px;
+        font-weight: 800;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 200;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        width: 50%;
+        min-width: 250px;
+        margin: 1rem 0;
+        div {
+          cursor: pointer;
+          width: 100%;
+          background-color: black;
+          padding: 10px;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .article_overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(21, 0, 56);
+      opacity: 0;
+      transition: $article_transition;
+      cursor: pointer;
+    }
+
+    .article_info {
+      position: absolute;
+      transition: $article_transition;
+      background-color: #222;
+      width: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .article_top {
+      padding: 5px 20px;
+      transform: translateY(-30px);
+    }
+    .article_bottom {
+      bottom: 0;
+      height: 30px;
+      transform: translateY(30px);
+
+      svg {
+        $svg_arrow_size: 50px;
+        width: $svg_arrow_size;
+        height: $svg_arrow_size / 2.5;
+
+        cursor: pointer;
+
+        margin: 5px auto;
+        display: block;
+        rect {
+          fill: $text_color1;
+          cursor: pointer;
+        }
+
+        rect:first-child {
+          transform: rotate(35deg);
+        }
+
+        rect:last-child {
+          transform: rotate(-35deg);
+          transform-origin: 100% 0%;
+        }
+      }
+    }
+
+    //Copenhagen care brands
+    &.copenhagen_care_brands {
+      background-image: url(../img/ccb_old.jpg);
+      background-position: center;
+      background-size: 100% 100%;
+
+      grid-area: span 2 / span 2;
+
+      .ccb_new {
+        height: 100%;
+        width: 50%;
+        background-position: left;
+        background-image: url(../img/ccb_new.jpg);
+        background-size: 200% 100%;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+
+    //Food8
+    &.food8 {
+      background: url(../img/food8.png) #888888;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    //Old Funky Furniture
+    &.one_funky_furniture {
+      background: url(../img/off_bg.jpg) #888888;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      img {
+        width: 40%;
+        margin: 5% auto;
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    //Republikken
+    &.republikken {
+      background: url(../img/republikken.svg) #d47778;
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      grid-area: span 2 / span 1;
+    }
+
+    //KEA Projects
+    &.kea_projects {
+      background: url(../img/kea_projects.png) #799fa8;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      grid-area: span 2 / span 1;
+    }
+
+    //Illustreret Videnskab
+    &.illvid {
+      background: url(../img/illvid.svg) #0a98d8;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      grid-area: span 2 / span 2;
+    }
+    //Dashboard
+    &.dashboard {
+      background: url(../img/fooBar.svg) #293541;
+      background-size: 20%;
+      background-repeat: no-repeat;
+      background-position: 15%;
+
+      grid-area: span 1 / span 2;
+
+      h2.overlay {
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        font-size: 4vw;
+        margin: 0;
+        color: #fe638d;
+      }
+    }
+
+    //CHP:DOX
+    &.cph_dox {
+      background: url(../img/cph_dox.svg) #000;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      grid-area: span 1 / span 2;
+    }
+
+    //Bistro Babushka
+    &.bistro {
+      background: url(../img/bistro.png) #800300;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    //Yndlings
+    &.yndlings {
+      background: url(../img/yndlings.svg) #22dbfc;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

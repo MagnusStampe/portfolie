@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  color: #121212;
+  color: #ddd;
   font-family: "Muli", sans-serif;
   cursor: default; }
 
@@ -17,25 +17,37 @@ a,
 button {
   cursor: pointer; }
 
+h2 {
+  font-size: 2.5rem; }
+
 #landing {
-  /* .linkedIn {
-    background-image: url("linkedIn.png");
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 11em;
-    height: 4em;
-  
-    margin: 1.5em 0;
-    border: solid black 1px;
-  
-    cursor: pointer;
-  } */ }
+  padding-left: 420px;
+  height: 100vh; }
+  #landing h1 {
+    width: 800px;
+    height: 100px;
+    margin: 110px 0 0 0px;
+    padding-top: 10px;
+    background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6) 800%, transparent);
+    font-size: 4rem;
+    text-align: center; }
+  #landing h2 {
+    color: #222; }
   #landing img {
     width: 300px;
     position: absolute;
     left: 80px;
     top: 150px; }
+  #landing .linkedIn {
+    background-image: url("../img/linkedIn.png");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+    border: solid black 1px;
+    cursor: pointer; }
   #landing .scroll_arrow {
     position: absolute;
     bottom: 2em;
@@ -52,3 +64,191 @@ button {
 @keyframes arrow_kf {
   100% {
     transform: translateY(60%); } }
+
+#skills {
+  margin: 200px 0;
+  background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6), transparent); }
+
+#examples {
+  padding: 0;
+  background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6) 800%, transparent);
+  padding: 30px 40px;
+  margin: 50px 0; }
+  #examples h3 {
+    font-size: 2rem;
+    margin: 10px 0; }
+  #examples .example_container {
+    background-color: rgba(0, 0, 70, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 11vw);
+    grid-gap: 20px; }
+  #examples article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s; }
+    #examples article.show {
+      height: 31vw;
+      z-index: 100; }
+      #examples article.show .article_overlay {
+        opacity: 0.8;
+        cursor: initial; }
+      #examples article.show .article_content {
+        opacity: 1;
+        z-index: 200;
+        display: block; }
+      #examples article.show .article_info {
+        transform: translateY(0); }
+      #examples article.show .article_bottom svg rect:first-child {
+        transform: rotate(-35deg) translate(-50px, -5px); }
+      #examples article.show .article_bottom svg rect:last-child {
+        transform: rotate(35deg) translate(50px, -5px);
+        transform-origin: 100% 0%; }
+    #examples article:hover .article_info {
+      transform: translateY(0); }
+    #examples article .article_content {
+      opacity: 0;
+      display: none;
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      transition: 0.2s; }
+      #examples article .article_content h2 {
+        font-size: 2rem;
+        margin-top: 40px;
+        font-weight: 800; }
+      #examples article .article_content h3 {
+        font-size: 1.5rem;
+        font-weight: 200; }
+      #examples article .article_content p {
+        font-size: 1.2rem;
+        margin: 1rem 0; }
+      #examples article .article_content a {
+        text-decoration: none;
+        display: inline-block;
+        width: 50%;
+        min-width: 250px;
+        margin: 1rem 0; }
+        #examples article .article_content a div {
+          cursor: pointer;
+          width: 100%;
+          background-color: black;
+          padding: 10px;
+          font-size: 1.3rem; }
+    #examples article .article_overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #150038;
+      opacity: 0;
+      transition: 0.2s;
+      cursor: pointer; }
+    #examples article .article_info {
+      position: absolute;
+      transition: 0.2s;
+      background-color: #222;
+      width: 100%;
+      z-index: 10;
+      cursor: pointer; }
+    #examples article .article_top {
+      padding: 5px 20px;
+      transform: translateY(-30px); }
+    #examples article .article_bottom {
+      bottom: 0;
+      height: 30px;
+      transform: translateY(30px); }
+      #examples article .article_bottom svg {
+        width: 50px;
+        height: 20px;
+        cursor: pointer;
+        margin: 5px auto;
+        display: block; }
+        #examples article .article_bottom svg rect {
+          fill: #ddd;
+          cursor: pointer; }
+        #examples article .article_bottom svg rect:first-child {
+          transform: rotate(35deg); }
+        #examples article .article_bottom svg rect:last-child {
+          transform: rotate(-35deg);
+          transform-origin: 100% 0%; }
+    #examples article.copenhagen_care_brands {
+      background-image: url(../img/ccb_old.jpg);
+      background-position: center;
+      background-size: 100% 100%;
+      grid-area: span 2 / span 2; }
+      #examples article.copenhagen_care_brands .ccb_new {
+        height: 100%;
+        width: 50%;
+        background-position: left;
+        background-image: url(../img/ccb_new.jpg);
+        background-size: 200% 100%;
+        position: absolute;
+        cursor: pointer; }
+    #examples article.food8 {
+      background: url(../img/food8.png) #888888;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    #examples article.one_funky_furniture {
+      background: url(../img/off_bg.jpg) #888888;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      #examples article.one_funky_furniture img {
+        width: 40%;
+        margin: 5% auto;
+        display: block;
+        cursor: pointer; }
+    #examples article.republikken {
+      background: url(../img/republikken.svg) #d47778;
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: span 2 / span 1; }
+    #examples article.kea_projects {
+      background: url(../img/kea_projects.png) #799fa8;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: span 2 / span 1; }
+    #examples article.illvid {
+      background: url(../img/illvid.svg) #0a98d8;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: span 2 / span 2; }
+    #examples article.dashboard {
+      background: url(../img/fooBar.svg) #293541;
+      background-size: 20%;
+      background-repeat: no-repeat;
+      background-position: 15%;
+      grid-area: span 1 / span 2; }
+      #examples article.dashboard h2.overlay {
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        font-size: 4vw;
+        margin: 0;
+        color: #fe638d; }
+    #examples article.cph_dox {
+      background: url(../img/cph_dox.svg) #000;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: span 1 / span 2; }
+    #examples article.bistro {
+      background: url(../img/bistro.png) #800300;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    #examples article.yndlings {
+      background: url(../img/yndlings.svg) #22dbfc;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }

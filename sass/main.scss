@@ -1,8 +1,14 @@
 //General SASS
 
+$text_color1: #ddd;
+$text_color2: #222;
+
+$bottom_left_gradient: rgba(2, 78, 129, 0.7);
+$top_right_gradient: rgba(54, 13, 129, 0.6);
+
 * {
   box-sizing: border-box;
-  color: #121212;
+  color: $text_color1;
   font-family: "Muli", sans-serif;
   cursor: default;
 }
@@ -23,6 +29,11 @@ button {
   cursor: pointer;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 //imports
 @import "sass/landing.scss";
-@import "sass/intro.scss";
+@import "sass/skills.scss";
+@import "sass/examples.scss";

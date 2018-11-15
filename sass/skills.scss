@@ -1,0 +1,10 @@
+#skills {
+  margin: 200px 0;
+
+  background: radial-gradient(
+      circle at bottom left,
+      $bottom_left_gradient,
+      transparent
+    ),
+    radial-gradient(circle at top right, $top_right_gradient, transparent);
+}

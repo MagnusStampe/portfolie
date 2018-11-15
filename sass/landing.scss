@@ -1,4 +1,33 @@
 #landing {
+  padding-left: 420px;
+
+  height: 100vh;
+  h1 {
+    width: 800px;
+    height: 100px;
+
+    margin: 110px 0 0 0px;
+    padding-top: 10px;
+
+    background: radial-gradient(
+        circle at bottom left,
+        $bottom_left_gradient,
+        transparent
+      ),
+      radial-gradient(
+        circle at top right,
+        $top_right_gradient 800%,
+        transparent
+      );
+
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  h2 {
+    color: $text_color2;
+  }
+
   img {
     width: 300px;
     position: absolute;
@@ -7,14 +36,14 @@
   }
 
   .linkedIn {
-    background-image: url("img/linkedIn.png");
+    background-image: url("../img/linkedIn.png");
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 11em;
-    height: 4em;
+    width: 200px;
+    height: 80px;
+    display: inline-block;
 
-    margin: 1.5em 0;
     border: solid black 1px;
 
     cursor: pointer;
