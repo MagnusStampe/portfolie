@@ -1,16 +1,21 @@
 //General SASS
 
-$text_color1: #ddd;
-$text_color2: #222;
+$text_color: #ddd;
+$bg_color: #222;
 
 $bottom_left_gradient: rgba(2, 78, 129, 0.7);
 $top_right_gradient: rgba(54, 13, 129, 0.6);
 
 * {
   box-sizing: border-box;
-  color: $text_color1;
+  color: $text_color;
   font-family: "Muli", sans-serif;
   cursor: default;
+}
+
+html {
+  background-color: $bg_color;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +25,8 @@ body {
 
 section {
   width: 100vw;
-  padding: 40px;
+  padding: 60px;
+  padding-top: 30px;
   position: relative;
 }
 
@@ -30,10 +36,29 @@ button {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-weight: 200;
+  font-size: 4rem;
+  margin: 40px 0px;
+}
+
+.section_spacer {
+  height: 150px;
+  background-color: $text_color;
+  background-size: auto 100%;
+
+  &.spacer_skills {
+    background-image: url(../img/spacer_skills.jpg);
+  }
+  &.spacer_examples {
+    background-image: url(../img/spacer_examples.jpg);
+  }
+  &.spacer_footer {
+    background-image: url(../img/spacer_footer.jpg);
+  }
 }
 
 //imports
 @import "sass/landing.scss";
 @import "sass/skills.scss";
 @import "sass/examples.scss";
+@import "sass/footer.scss";

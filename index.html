@@ -15,80 +15,87 @@
     <main>
         <!-- Landing page -->
         <section id="landing">
-            <img src="img/profilbillede.JPG">
-            <h1>Magnus Stampe Nielsen</h1>
-            <h2>3. semestre | Multimediedesigner | Frontend designer linjen</h2>
-            <h2>Københavns Erhvervsakademi</h2>
-            <a href="https://www.linkedin.com/in/magnus-stampe-nielsen/" target="_blank" ><div class="linkedIn"></div></a>
+            <div class="grid_container">
+                <img src="img/profilbillede.JPG">
+                <div>
+                    <h1>Magnus Stampe Nielsen</h1>
+                    <h2>3. semestre | Multimediedesigner</h2>
+                    <h2>Frontend designer valgfag</h2>
+                    <h2>Københavns Erhvervsakademi</h2>
+                    <a href="https://www.linkedin.com/in/magnus-stampe-nielsen/" target="_blank" ><div class="linkedIn">
+                    </div></a>
+                </div>
+            </div>
             <!-- <img src="profilbillede.JPG"> -->
-            <div class="scroll_arrow">
+            <a class="scroll_arrow" href="#skills">
                 <svg viewBox="0 0 100 45">
                     <rect class="left" x="5" y="0" rx="5" ry="5" height="10" width="55"></rect>
                     <rect class="right" x="40" y="0" rx="5" ry="5" height="10" width="55"></rect>
                 </svg>
-            </div>
+            </a>
+        
         </section>
+        <div class="section_spacer spacer_skills"></div>
         <!-- Skills -->
         <section id="skills">
+            <h2>Mine færdigheder</h2>
+            <div id="skills_container">
             <article id="skill_okay">
                 <h3>Lidt erfaring</h3>
-                <ul>
-                    <li>React</li>
-                    <li>API keys</li>
-                    <li>Adobe Premiere Pro</li>
-                    <li>Adobe After Effects</li>
-                    <li>Adobe XD</li>
-                </ul>
+                    <p>React</p>
+                    <p>API keys</p>
+                    <h4 class="points">Adobe</h4>
+                    <p class="points">Premiere Pro</p>
+                    <p class="points">After Effects</p>
+                    <p class="points">XD</p>
             </article>
             <article id="skill_good">
                 <h3>En del erfaring</h3>
-                <ul>
-                    <li>Kodning af SVG</li>
-                    <li>Animation - CSS</li>
-                    <li>Animation - JS</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe InDesign</li>
-                    <li>NodeJS</li>
-                    <li>HTML forms</li>
-                </ul>
+                    <p>Kodning af SVG</p>
+                    <p>NodeJS</p>
+                    <p>HTML forms</p>
+                    <p>Animation - CSS</p>
+                    <p>Animation - JS</p>
+                    <h4 class="points">Adobe</h4>
+                    <p class="points">Illustrator</p>
+                    <p class="points">Photoshop</p>
+                    <p class="points">InDesign</p>
             </article>
             <article id="skill_very_good">
                 <h3>Meget erfaring</h3>
-                <ul>
-                    <li>CSS positioning</li>
-                    <li>Pseudoselectors i CSS</li>
-                    <li>Semantisk HTML</li>
-                    <li>SASS</li>
-                    <li>Git</li>
-                    <li>JS methods</li>
-                    <li>JSON</li>
-                </ul>
+                    <p>CSS positioning</p>
+                    <p>Pseudoselectors i CSS</p>
+                    <p>Semantisk HTML</p>
+                    <p>SASS</p>
+                    <p>Git</p>
+                    <p>JS methods</p>
+                    <p>JSON</p>
             </article>
+            </div>
         </section>
-        <!-- Portfolio -->
+        <div class="section_spacer spacer_examples"></div>
+        <!-- Examples -->
         <section id="examples">
-            <div class="semester_row">
-                    <h2>Portfolio</h2>
-                <div class="example_container">
-                    <!--Copenhagen Care Brands-->
-                    <article class="copenhagen_care_brands">
-                        <div class="ccb_new"></div>
-                        <div class="article_info article_top">Redesign af www.CopenhagenCareBrands.dk</div>
-                        <div class="article_info article_bottom">
-                            <svg viewBox="0 0 100 100">
-                                <rect  x="-47" y="34" rx="8" ry="5" width="141" height="11" />
-                                <rect  x="6" y="34" rx="8" ry="5" width="141" height="11" />
-                            </svg>
-                        </div>
-                        <div class="article_overlay"></div>
-                        <div class="article_content">
-                            <h2>Copenhagen Care Brands</h2>
-                            <p>En af mine første projekter på studiet</p>
-                            <p>Redesign af deres hjemmeside inkl. virksomhedsvideo</p>
-                            <p>Copenhagen Care Brands endte med at bruge vores hjemmeside, med kun et par ændringer</p>
+            <h2>Mine projekter</h2>
+            <div class="example_container">
+                <!--Copenhagen Care Brands-->
+                <article class="copenhagen_care_brands">
+                    <div class="ccb_new"></div>
+                    <div class="article_info article_top">Redesign af www.CopenhagenCareBrands.dk</div>
+                    <div class="article_info article_bottom">
+                        <svg viewBox="0 0 100 100">
+                            <rect  x="-47" y="34" rx="8" ry="5" width="141" height="11" />
+                            <rect  x="6" y="34" rx="8" ry="5" width="141" height="11" />
+                        </svg>
+                    </div>
+                    <div class="article_overlay"></div>
+                    <div class="article_content">
+                        <h2>Copenhagen Care Brands</h2>
+                        <p>En af mine første projekter på studiet</p>
+                        <p>Redesign af deres hjemmeside inkl. virksomhedsvideo</p>
+                        <p>Copenhagen Care Brands endte med at bruge vores hjemmeside, med kun et par ændringer</p>
 
-                            <a href="#KODE_OG_NAVNwww.magnusstampe.dk/portfolie/ex/#INSERT_LINK#">
+                            <a href="http/magnusstampe.dk/portfolio/ex/ccb/" target="_blank">
                                 <div>Vores version</div>
                             </a>
                             <a href="http://www.copenhagencarebrands.dk" target="_blank">
@@ -96,26 +103,23 @@
                             </a>
                         </div>
                     </article>
-                    <!--Food8-->
-                    <article class="food8">
-                        <div class="article_info article_top">Redesign af www.Food8.dk</div>
-                        <div class="article_info article_bottom">
-                            <svg viewBox="0 0 100 100">
-                                <rect  x="-47" y="34" rx="8" ry="5" width="141" height="11" />
-                                <rect  x="6" y="34" rx="8" ry="5" width="141" height="11" />
-                            </svg>
-                        </div>
-                        <div class="article_overlay"></div>
-                        <div class="article_content">
-                            <h2>Food8</h2>
-                            <p>Redesign af hjemmeside</p>
-                            <p>Food8 er en samlet hjemmeside for flere restauratøre og lign.</p>
-                            <p>Arbejdede med JSON og RestAPI</p>
-                            <a><div>
-                                Vores aflevering
-                            </div></a>
-                        </div>
-                    </article>
+                    <!--Cold-->
+                    <article class="cold" >
+                            <div class="article_info article_top">Animation med spritesheets</div>
+                            <div class="article_info article_bottom">
+                                    <svg viewBox="0 0 100 100">
+                                        <rect  x="-47" y="34" rx="8" ry="5" width="141" height="11" />
+                                        <rect  x="6" y="34" rx="8" ry="5" width="141" height="11" />
+                                    </svg>                            
+                                </div>
+                            <div class="article_overlay"></div>
+                            <div class="article_content">
+                                <h2>Cold</h2>
+                                <p>Øvelsescase med interaktiv animation</p>
+                                <p>Stilart inspireret af Limbo</p>
+                                <a href="http/magnusstampe.dk/portfolio/ex/cold/" target="_blank"><div>Se det her</div></a>
+                            </div>
+                        </article>
                     <!--One Funky Furniture-->
                     <article class="one_funky_furniture">
                         <div class="article_info article_top">Redesign af wwww.OneFunkyFurniture.dk</div>
@@ -131,7 +135,7 @@
                             <p>Redesign af hjemmeside</p>
                             <p>One Funky Furniture laver speciellavede møbler</p>
                             <p>Arbejdede med JSON og RestAPI</p>
-                            <a><div>Vores løsning</div></a>
+                            <a href="http://magnusstampe.dk/2sem_eksamen/" target="_blank"><div>Se det her</div></a>
                         </div>
                         <img src="img/off.png">
                     </article>
@@ -149,8 +153,7 @@
                             <h2>Republikken</h2>
                             <p>App design til kontorfællesskab Republikken</p>
                             <p>Vores løsning blev valgt til "Den mest hele løsning"</p>
-                            <button>Prøv app</button>
-                            <iframe></iframe>
+                            <a href="https://xd.adobe.com/embed/7f4fe7ab-6679-4d5a-a249-05f3d4ed1b70/" target="_blank"><div>Prøv app</div></a>
                         </div>
                     </article>
                     <!--KEA Projects-->
@@ -167,8 +170,7 @@
                             <h2>KEA Projects</h2>
                             <p>Øvelsescase med formålet at lære app design</p>
                             <p>Appen er designet til brug på KEA</p>
-                            <button>Prøv app</button>
-                            <iframe></iframe>
+                            <a href="https://xd.adobe.com/view/318b7d4f-cb5c-4d4b-82f7-f2adf610b0b0/" target="_blank"><div>Prøv app</div></a>
                         </div>
                     </article>
                     <!--Illustreret Videnskab-->
@@ -185,7 +187,7 @@
                         <h2>Illustreret Videnskab</h2>
                         <p>Forbedring af kampangesite og betalingsform</p>
                         <p>BEMÆRK: Dette site er kun lavet til mobilversion</p>
-                        <a><div>Vores aflevering</div></a>
+                        <a href="http/magnusstampe.dk/portfolio/ex/illvid/" target="_blank"><div>Se det her</div></a>
                     </div>
                     </article>
                     <!--Dashboard-->
@@ -202,7 +204,7 @@
                             <p>Lav et dashboard som fungere ud fra udleveret script</p>
                             <p>Scriptet simulere en bar hvor der sælges øl</p>
                             <p>Løsningen er lavet til barens manager</p>
-                            <a><div>Vores aflevering</div></a>
+                            <a href="http/magnusstampe.dk/portfolio/ex/FooBar/" target="_blank"><div>Se det her</div></a>
                         </div>
                    </article>
                     <!--CPH:DOX-->
@@ -218,7 +220,7 @@
                             <h2>CPH:DOX - Mor på sociale medier</h2>
                             <p>Video lavet til Copenhagen International Documentary Festival</p>
                             <p>Interview af en mor der ligger billeder af sin baby på Instagram</p>
-                            <iframe></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CoYBGGOH4cg" class="video" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </article>
                     <!--Bistro Babushka-->
@@ -235,32 +237,56 @@
                                 <h2>Bistro Babushka</h2>
                                 <p>Øvelsescase med formål at lære JSON</p>
                                 <p>JSON fil udleveret med menu til restaurant</p>
-                                <a><div>Min løsning</div></a>
+                                <a href="http/magnusstampe.dk/portfolio/ex/babushka/" target="_blank"><div>Se det her</div></a>
                             </div>
                     </article>
-                    <!--Yndlings-->
-                    <article class="yndlings" >
-                        <div class="article_info article_top">Kampagnesite og video til Yndlings</div>
-                        <div class="article_info article_bottom">
+                    <!--Food8-->
+                    <article class="food8">
+                            <div class="article_info article_top">Redesign af www.Food8.dk</div>
+                            <div class="article_info article_bottom">
                                 <svg viewBox="0 0 100 100">
                                     <rect  x="-47" y="34" rx="8" ry="5" width="141" height="11" />
                                     <rect  x="6" y="34" rx="8" ry="5" width="141" height="11" />
-                                </svg>                            
+                                </svg>
                             </div>
-                        <div class="article_overlay"></div>
-                        <div class="article_content">
-                            <h2>Yndlings</h2>
-                            <p>Kampagnesite og explainer til Yndlings</p>
-                            <p>Ungdomsforsikring fra Alm. Brand</p>
-                            <iframe></iframe>
-                            <a><div>Kampagnesite</div></a>
-                        </div>
-                    </article>
+                            <div class="article_overlay"></div>
+                            <div class="article_content">
+                                <h2>Food8</h2>
+                                <p>Redesign af hjemmeside</p>
+                                <p>Food8 er en samlet hjemmeside for flere restauratøre og lign.</p>
+                                <p>Arbejdede med JSON og RestAPI</p>
+                                <a href="http://magnusstampe.dk/food8/" target="_blank"><div>
+                                        Se det her
+                                </div></a>
+                            </div>
+                        </article>
                 </div>
-            </div>
             </div>
         </section>
     </main>
+
+        <div class="section_spacer spacer_footer"></div>
+    <footer>
+        <article class="personinfo">
+            <h3>Magnus Stampe Nielsen</h3>
+            <p>Studie: Københavns Erhvervsakademi</p>
+            <p>Linje: Multimediedesigner</p>
+            <p>Valgfag: Frontend design</p>
+        </article>
+
+    <article class="kontakt">
+        <h3>Kontakt mig</h3>
+        <p>+45 30 28 81 89</p>
+        <p>m_s_nielsen288@hotmail.com</p>
+    </article>
+    
+    <article class="links">
+        <p>LinkedIn profil</p>
+            <a href="https://www.linkedin.com/in/magnus-stampe-nielsen/" target="_blank" ><div class="linkedIn link"></div></a>
+        <p>Repository for dette site</p>
+        <a href="https://github.com/MagnusStampe/portfolio" target="_blank"><div class="github link"></div></a>
+    </article>
+    </footer>
 
     <script src="script.js"></script>
 </body>

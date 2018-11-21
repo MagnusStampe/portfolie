@@ -4,13 +4,18 @@
   font-family: "Muli", sans-serif;
   cursor: default; }
 
+html {
+  background-color: #222;
+  scroll-behavior: smooth; }
+
 body {
   margin: 0;
   padding: 0; }
 
 section {
   width: 100vw;
-  padding: 40px;
+  padding: 60px;
+  padding-top: 30px;
   position: relative; }
 
 a,
@@ -18,35 +23,46 @@ button {
   cursor: pointer; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-weight: 200;
+  font-size: 4rem;
+  margin: 40px 0px; }
+
+.section_spacer {
+  height: 150px;
+  background-color: #ddd;
+  background-size: auto 100%; }
+  .section_spacer.spacer_skills {
+    background-image: url(../img/spacer_skills.jpg); }
+  .section_spacer.spacer_examples {
+    background-image: url(../img/spacer_examples.jpg); }
+  .section_spacer.spacer_footer {
+    background-image: url(../img/spacer_footer.jpg); }
 
 #landing {
-  padding-left: 420px;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #222; }
+  #landing .grid_container {
+    display: grid;
+    grid-template-columns: 400px 1fr; }
   #landing h1 {
-    width: 800px;
-    height: 100px;
-    margin: 110px 0 0 0px;
-    padding-top: 10px;
-    background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6) 800%, transparent);
+    margin: 0;
+    padding: 0;
     font-size: 4rem;
-    text-align: center; }
+    font-weight: 200; }
   #landing h2 {
-    color: #222; }
+    font-size: 2.5rem; }
   #landing img {
     width: 300px;
-    position: absolute;
-    left: 80px;
-    top: 150px; }
+    margin-top: 20px; }
   #landing .linkedIn {
     background-image: url("../img/linkedIn.png");
+    background-color: #eee;
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
     width: 200px;
     height: 80px;
     display: inline-block;
-    border: solid black 1px;
     cursor: pointer; }
   #landing .scroll_arrow {
     position: absolute;
@@ -54,32 +70,54 @@ h2 {
     width: 8vw;
     left: 46vw;
     animation: arrow_kf 1s infinite ease-in-out alternate;
-    fill: #121212; }
+    fill: #ddd; }
     #landing .scroll_arrow .left {
       transform: rotate(20deg); }
     #landing .scroll_arrow .right {
       transform-origin: right top;
       transform: rotate(-20deg); }
+    #landing .scroll_arrow svg,
+    #landing .scroll_arrow svg rect {
+      cursor: pointer; }
 
 @keyframes arrow_kf {
   100% {
     transform: translateY(60%); } }
 
 #skills {
-  margin: 200px 0;
-  background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6), transparent); }
+  background-color: #222; }
+  #skills #skills_container {
+    display: flex; }
+    #skills #skills_container article {
+      width: 300px; }
+      #skills #skills_container article h3 {
+        font-size: 2rem;
+        font-weight: 200; }
+      #skills #skills_container article li {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 200; }
+      #skills #skills_container article p {
+        font-size: 1.2rem; }
+      #skills #skills_container article h4.points {
+        font-size: 1.3rem;
+        margin-bottom: 0; }
+      #skills #skills_container article p.points {
+        margin-left: 20px;
+        font-weight: 200; }
+    #skills #skills_container #skill_okay h3 {
+      color: #cebc19; }
+    #skills #skills_container #skill_good h3 {
+      color: #9ece19; }
+    #skills #skills_container #skill_very_good h3 {
+      color: #1fce19; }
 
 #examples {
-  padding: 0;
-  background: radial-gradient(circle at bottom left, rgba(2, 78, 129, 0.7), transparent), radial-gradient(circle at top right, rgba(54, 13, 129, 0.6) 800%, transparent);
-  padding: 30px 40px;
-  margin: 50px 0; }
+  background-color: #222; }
   #examples h3 {
     font-size: 2rem;
     margin: 10px 0; }
   #examples .example_container {
-    background-color: rgba(0, 0, 70, 0.2);
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 11vw);
@@ -89,7 +127,7 @@ h2 {
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #222;
     overflow: hidden;
     cursor: pointer;
     transition: 0.2s; }
@@ -104,12 +142,22 @@ h2 {
         z-index: 200;
         display: block; }
       #examples article.show .article_info {
-        transform: translateY(0); }
+        transform: translateY(0);
+        z-index: 300; }
       #examples article.show .article_bottom svg rect:first-child {
         transform: rotate(-35deg) translate(-50px, -5px); }
       #examples article.show .article_bottom svg rect:last-child {
         transform: rotate(35deg) translate(50px, -5px);
         transform-origin: 100% 0%; }
+      #examples article.show.copenhagen_care_brands {
+        background-size: 200% 200%; }
+        #examples article.show.copenhagen_care_brands .ccb_new {
+          background-size: 400% 200%;
+          background-position: 33.4%; }
+      #examples article.show.one_funky_furniture img {
+        display: none; }
+      #examples article.show.dashboard h2.overlay {
+        top: 40%; }
     #examples article:hover .article_info {
       transform: translateY(0); }
     #examples article .article_content {
@@ -134,31 +182,38 @@ h2 {
         display: inline-block;
         width: 50%;
         min-width: 250px;
-        margin: 1rem 0; }
+        margin: 1rem 0 0 0; }
         #examples article .article_content a div {
           cursor: pointer;
           width: 100%;
           background-color: black;
           padding: 10px;
           font-size: 1.3rem; }
+          #examples article .article_content a div:hover {
+            transform: scale(1.05); }
+      #examples article .article_content iframe.video {
+        width: 20vw;
+        height: 12vw;
+        margin: 2px auto;
+        display: block; }
     #examples article .article_overlay {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #150038;
+      background-color: #222;
       opacity: 0;
       transition: 0.2s;
       cursor: pointer; }
     #examples article .article_info {
       position: absolute;
       transition: 0.2s;
-      background-color: #222;
+      background-color: #111;
       width: 100%;
       z-index: 10;
       cursor: pointer; }
     #examples article .article_top {
       padding: 5px 20px;
-      transform: translateY(-30px); }
+      transform: translateY(-50px); }
     #examples article .article_bottom {
       bottom: 0;
       height: 30px;
@@ -247,8 +302,30 @@ h2 {
       background-size: 60%;
       background-repeat: no-repeat;
       background-position: center; }
-    #examples article.yndlings {
-      background: url(../img/yndlings.svg) #22dbfc;
-      background-size: 50%;
+    #examples article.cold {
+      background-image: url(../img/cold.jpg);
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
+
+footer {
+  padding: 20px;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between; }
+  footer article {
+    width: 25vw; }
+  footer .linkedIn {
+    background-image: url("../img/linkedIn.png");
+    background-size: 80%; }
+  footer .link {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    cursor: pointer; }
+  footer .github {
+    background-image: url(../img/github.svg);
+    background-size: 64%; }

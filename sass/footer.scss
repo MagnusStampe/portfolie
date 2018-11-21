@@ -1,0 +1,31 @@
+footer {
+  padding: 20px;
+  background-color: $bg_color;
+  display: flex;
+  justify-content: space-between;
+
+  article {
+    width: 25vw;
+  }
+
+  .linkedIn {
+    background-image: url("../img/linkedIn.png");
+    background-size: 80%;
+  }
+
+  .link {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+
+    cursor: pointer;
+  }
+
+  .github {
+    background-image: url(../img/github.svg);
+    background-size: 64%;
+  }
+}

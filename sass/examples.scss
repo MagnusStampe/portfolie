@@ -1,25 +1,13 @@
 #examples {
-  padding: 0;
+  background-color: $bg_color;
+  $article_height: 11vw;
 
   h3 {
     font-size: 2rem;
     margin: 10px 0;
   }
 
-  background: radial-gradient(
-      circle at bottom left,
-      $bottom_left_gradient,
-      transparent
-    ),
-    radial-gradient(circle at top right, $top_right_gradient 800%, transparent);
-  padding: 30px 40px;
-  margin: 50px 0;
-
-  $article_height: 11vw;
-
   .example_container {
-    background-color: rgba(0, 0, 70, 0.2);
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, $article_height);
@@ -31,7 +19,7 @@
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $bg_color;
     overflow: hidden;
     cursor: pointer;
     $article_transition: 0.2s;
@@ -55,6 +43,7 @@
 
       .article_info {
         transform: translateY(0);
+        z-index: 300;
       }
       .article_bottom {
         svg {
@@ -67,6 +56,21 @@
             transform-origin: 100% 0%;
           }
         }
+      }
+
+      &.copenhagen_care_brands {
+        background-size: 200% 200%;
+
+        .ccb_new {
+          background-size: 400% 200%;
+          background-position: 33.4%;
+        }
+      }
+      &.one_funky_furniture img {
+        display: none;
+      }
+      &.dashboard h2.overlay {
+        top: 40%;
       }
     }
 
@@ -106,14 +110,24 @@
         display: inline-block;
         width: 50%;
         min-width: 250px;
-        margin: 1rem 0;
+        margin: 1rem 0 0 0;
         div {
           cursor: pointer;
           width: 100%;
           background-color: black;
           padding: 10px;
           font-size: 1.3rem;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
+      }
+      iframe.video {
+        width: 20vw;
+        height: 12vw;
+        margin: 2px auto;
+        display: block;
       }
     }
 
@@ -121,7 +135,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgb(21, 0, 56);
+      background-color: $bg_color;
       opacity: 0;
       transition: $article_transition;
       cursor: pointer;
@@ -130,7 +144,7 @@
     .article_info {
       position: absolute;
       transition: $article_transition;
-      background-color: #222;
+      background-color: #111;
       width: 100%;
       z-index: 10;
       cursor: pointer;
@@ -138,7 +152,7 @@
 
     .article_top {
       padding: 5px 20px;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
     }
     .article_bottom {
       bottom: 0;
@@ -155,7 +169,7 @@
         margin: 5px auto;
         display: block;
         rect {
-          fill: $text_color1;
+          fill: $text_color;
           cursor: pointer;
         }
 
@@ -278,10 +292,10 @@
       background-position: center;
     }
 
-    //Yndlings
-    &.yndlings {
-      background: url(../img/yndlings.svg) #22dbfc;
-      background-size: 50%;
+    //cold
+    &.cold {
+      background-image: url(../img/cold.jpg);
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }

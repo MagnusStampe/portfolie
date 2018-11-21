@@ -1,10 +1,50 @@
 #skills {
-  margin: 200px 0;
+  background-color: $bg_color;
 
-  background: radial-gradient(
-      circle at bottom left,
-      $bottom_left_gradient,
-      transparent
-    ),
-    radial-gradient(circle at top right, $top_right_gradient, transparent);
+  #skills_container {
+    display: flex;
+
+    article {
+      width: 300px;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 200;
+      }
+
+      li {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 200;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      h4.points {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+      }
+      p.points {
+        margin-left: 20px;
+        font-weight: 200;
+      }
+    }
+    #skill_okay {
+      h3 {
+        color: rgb(206, 188, 25);
+      }
+    }
+
+    #skill_good {
+      h3 {
+        color: rgb(158, 206, 25);
+      }
+    }
+
+    #skill_very_good {
+      h3 {
+        color: rgb(31, 206, 25);
+      }
+    }
+  }
 }

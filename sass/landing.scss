@@ -1,50 +1,39 @@
 #landing {
-  padding-left: 420px;
-
   height: 100vh;
+
+  background-color: $bg_color;
+
+  .grid_container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+
   h1 {
-    width: 800px;
-    height: 100px;
-
-    margin: 110px 0 0 0px;
-    padding-top: 10px;
-
-    background: radial-gradient(
-        circle at bottom left,
-        $bottom_left_gradient,
-        transparent
-      ),
-      radial-gradient(
-        circle at top right,
-        $top_right_gradient 800%,
-        transparent
-      );
+    margin: 0;
+    padding: 0;
 
     font-size: 4rem;
-    text-align: center;
+    font-weight: 200;
   }
 
   h2 {
-    color: $text_color2;
+    font-size: 2.5rem;
   }
 
   img {
     width: 300px;
-    position: absolute;
-    left: 80px;
-    top: 150px;
+    margin-top: 20px;
   }
 
   .linkedIn {
     background-image: url("../img/linkedIn.png");
+    background-color: #eee;
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
     width: 200px;
     height: 80px;
     display: inline-block;
-
-    border: solid black 1px;
 
     cursor: pointer;
   }
@@ -56,7 +45,7 @@
 
     animation: arrow_kf 1s infinite ease-in-out alternate;
 
-    fill: #121212;
+    fill: $text_color;
 
     .left {
       transform: rotate(20deg);
@@ -64,6 +53,11 @@
     .right {
       transform-origin: right top;
       transform: rotate(-20deg);
+    }
+
+    svg,
+    svg rect {
+      cursor: pointer;
     }
   }
 
