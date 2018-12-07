@@ -10,7 +10,9 @@ html {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden; }
 
 section {
   width: 100vw;
@@ -50,7 +52,8 @@ h2 {
     font-size: 4rem;
     font-weight: 200; }
   #landing h2 {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    margin: 20px 0; }
   #landing img {
     width: 300px;
     margin-top: 20px; }
@@ -114,10 +117,55 @@ h2 {
 
 #examples {
   background-color: #222; }
+  #examples h2 {
+    cursor: pointer;
+    transition: 0.5s; }
   #examples h3 {
     font-size: 2rem;
     margin: 10px 0; }
-  #examples .example_container {
+  #examples .header_container {
+    display: flex;
+    width: 100%; }
+    #examples .header_container h2 {
+      width: 500px; }
+      #examples .header_container h2.cv_header {
+        color: #444; }
+  #examples.cv_shown h2.ex_header {
+    color: #444; }
+  #examples.cv_shown h2.cv_header {
+    color: #ddd; }
+  #examples.cv_shown #example_container {
+    transform: translateX(-100vw); }
+  #examples.cv_shown #cv_container {
+    transform: translateX(0); }
+  #examples #cv_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-right: 30px;
+    position: absolute;
+    top: 140px;
+    transform: translateX(100vw);
+    transition: 0.5s ease-in-out; }
+    #examples #cv_container h3 {
+      margin-top: 40px; }
+    #examples #cv_container h4 {
+      margin-bottom: 0;
+      font-size: 1.3rem; }
+    #examples #cv_container p {
+      margin: 0; }
+    #examples #cv_container b {
+      font-size: 1.1rem; }
+    #examples #cv_container .year {
+      margin: 0; }
+    #examples #cv_container .personinfo {
+      width: 70%;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px; }
+  #examples #example_container {
+    transition: 0.5s ease-in-out;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 11vw);
@@ -308,6 +356,23 @@ h2 {
       background-repeat: no-repeat;
       background-position: center; }
 
+@media only screen and (max-width: 1460px) {
+  #examples article .article_content h2 {
+    font-size: 1.3rem;
+    margin: 30px 0 10px 0; }
+  #examples article .article_content p {
+    font-size: 1rem;
+    margin: 5px 0; }
+  #examples article .article_content a div {
+    font-size: 1rem; } }
+
+@media only screen and (max-width: 1050px) {
+  #examples #example_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 22vw); }
+    #examples #example_container article.show {
+      height: 50vw; } }
+
 footer {
   padding: 20px;
   background-color: #222;
@@ -329,3 +394,7 @@ footer {
   footer .github {
     background-image: url(../img/github.svg);
     background-size: 64%; }
+
+@media only screen and (max-width: 1050px) {
+  section {
+    padding: 20px; } }

@@ -2,12 +2,87 @@
   background-color: $bg_color;
   $article_height: 11vw;
 
+  h2 {
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
   h3 {
     font-size: 2rem;
     margin: 10px 0;
   }
 
-  .example_container {
+  .header_container {
+    display: flex;
+    width: 100%;
+    h2 {
+      width: 500px;
+      &.cv_header {
+        color: #444;
+      }
+    }
+  }
+
+  &.cv_shown {
+    h2.ex_header {
+      color: #444;
+    }
+    h2.cv_header {
+      color: $text_color;
+    }
+    #example_container {
+      transform: translateX(-100vw);
+    }
+    #cv_container {
+      transform: translateX(0);
+    }
+  }
+
+  #cv_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-right: 30px;
+
+    position: absolute;
+    top: 140px;
+
+    transform: translateX(100vw);
+
+    transition: 0.5s ease-in-out;
+
+    h3 {
+      margin-top: 40px;
+    }
+
+    h4 {
+      margin-bottom: 0;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    b {
+      font-size: 1.1rem;
+    }
+
+    .year {
+      margin: 0;
+    }
+    .personinfo {
+      width: 70%;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px;
+    }
+  }
+
+  #example_container {
+    transition: 0.5s ease-in-out;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, $article_height);
@@ -298,6 +373,36 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+}
+@media only screen and (max-width: 1460px) {
+  #examples {
+    article .article_content {
+      h2 {
+        font-size: 1.3rem;
+        margin: 30px 0 10px 0;
+      }
+      p {
+        font-size: 1rem;
+        margin: 5px 0;
+      }
+      a div {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #examples {
+    #example_container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(7, 22vw);
+
+      article.show {
+        height: 50vw;
+      }
     }
   }
 }

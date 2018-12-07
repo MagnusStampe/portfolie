@@ -13,6 +13,20 @@ function init() {
   console.log(articleOverlays);
   console.log(articleArrows);
 
+  const examples = document.querySelector("#examples");
+
+  document
+    .querySelector("#examples .ex_header")
+    .addEventListener("click", () => {
+      examples.classList.remove("cv_shown");
+    });
+
+  document
+    .querySelector("#examples .cv_header")
+    .addEventListener("click", () => {
+      examples.classList.add("cv_shown");
+    });
+
   articleOverlays.forEach(article => {
     article.addEventListener("click", articleClicked);
   });

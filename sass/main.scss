@@ -21,6 +21,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 section {
@@ -62,3 +64,9 @@ h2 {
 @import "sass/skills.scss";
 @import "sass/examples.scss";
 @import "sass/footer.scss";
+
+@media only screen and (max-width: 1050px) {
+  section {
+    padding: 20px;
+  }
+}
